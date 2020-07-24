@@ -34,7 +34,7 @@ function commandPrompt() {
 };
 
 function getHelp() {
-    console.log(`---\n${chalk.cyanBright('<details>')} - Get account details\n${chalk.cyanBright('<block>')}/${chalk.cyanBright('<unblock>')} - Block/Unblock account\n${chalk.cyanBright('<details>')} - Get account details\n${chalk.cyanBright('<sudo>')} - Authorize by superuser\n${chalk.cyanBright('<token>')} - Generate new access token\n${chalk.cyanBright('<accesslevel>')} - Change account access level\n---`);
+    console.log(`---\n${chalk.cyanBright('<details>')} - Get account details\n${chalk.cyanBright('<block>')}/${chalk.cyanBright('<unblock>')} - Block/Unblock account\n${chalk.cyanBright('<details>')} - Get account details\n${chalk.cyanBright('<token>')} - Generate new access token\n${chalk.cyanBright('<accesslevel>')} - Change account access level\n---`);
     commandPrompt();
 };
 
@@ -163,7 +163,7 @@ function createApp() {
 };
 
 function encrypt(data) {
-    var cipher = crypto.createCipher('aes-256-ctr', '340fae9056581cac935b459bc8be7bdf7d362f591117e1cad1f074891a4ce71ae9b90e4083162ebb40f4a4a53a27f96e36de00f7b430c830f4ab87e159a33172');
+    var cipher = crypto.createCipher('aes-256-ctr', 'topSecretSalt');
     var crypted = cipher.update(data,'utf8','hex');
     crypted += cipher.final('hex');
     return crypted;
