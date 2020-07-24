@@ -17,7 +17,7 @@ On command line, type in the following commands:
      
 Generate new access token, using **token** command:
 
-     ? token(token will be in config.json)
+     ? token (token will be in config.json)
 
 For help, type **help** in the Cryo CLI:
     
